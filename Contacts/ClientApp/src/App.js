@@ -1,20 +1,31 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router';
-import { Layout } from './components/Layout';
-import { Home } from './components/Home';
-import { FetchData } from './components/FetchData';
-import { Counter } from './components/Counter';
+import ContactsList from './components/ContactsList'
 
-export default class App extends Component {
-  displayName = App.name
+const contacts = [
+    {
+        "id": "ryan",
+        "name": "Ryan Florence",
+        "email": "ryan@reacttraining.com",
+        "avatarURL": "/ryan.jpg"
+    },
+    {
+        "id": "michael",
+        "name": "Michael Jackson",
+        "email": "michael@reacttraining.com",
+        "avatarURL": "/michael.jpg"
+    },
+    {
+        "id": "tyler",
+        "name": "Tyler McGinnis",
+        "email": "tyler@reacttraining.com",
+        "avatarURL": "/tyler.jpg"
+    }
+]
 
-  render() {
-    return (
-      <Layout>
-        <Route exact path='/' component={Home} />
-        <Route path='/counter' component={Counter} />
-        <Route path='/fetchdata' component={FetchData} />
-      </Layout>
-    );
-  }
+class App extends Component {
+    render() {
+        return <ContactsList contacts={contacts} />
+    }
 }
+export default App;
+
