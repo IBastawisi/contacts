@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as ContactsAPI from './API/ContactsAPI'
 import ContactsList from './components/ContactsList'
 
 const contacts = [

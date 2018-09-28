@@ -8,12 +8,11 @@ namespace Contacts.Repository
 {
     public interface IContactRepo
     {
-        IEnumerable<Contact> GetContactList();
-        Contact GetContact(Guid Id);
-
-        int AddContact(Contact contact);
-        int UpdateContact(Contact contact);
-        int DeleteContact(Contact contact);
+        IEnumerable<Contact> GetAll();
+        Contact Get(Guid Id);
+        IEnumerable<Contact> Add(Contact contact);
+        IEnumerable<Contact> Update(Guid Id, Contact newContact);
+        IEnumerable<Contact> Delete(Guid Id);
 
     }
 }

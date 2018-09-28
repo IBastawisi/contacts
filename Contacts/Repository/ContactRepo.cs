@@ -8,7 +8,7 @@ namespace Contacts.Repository
 {
     public class ContactRepo : IContactRepo
     {
-        enum StatusCode { OK = 1, Error = -1 };
+        //enum StatusCode { OK = 1, Error = -1 };
 
         private Context contactDb;
 
@@ -17,16 +17,16 @@ namespace Contacts.Repository
             contactDb = new Context();
         }
 
-        public IEnumerable<Contact> GetContactList()
+        public IEnumerable<Contact> GetAll ()
         {
             throw new NotImplementedException();
         }
 
-        public Contact GetContact(Guid Id)
+        public Contact Get(Guid Id)
         {
             try
             {
-                Contact contact = contactDb.Contacts.FirstOrDefault(c => c.contactId == Id);
+                Contact contact = contactDb.Contacts.FirstOrDefault(c => c.ContactId == Id);
 
                 if (contact != null)
                 {
@@ -44,17 +44,17 @@ namespace Contacts.Repository
             }
         }
 
-        public int AddContact(Contact contact)
+        public IEnumerable<Contact> Add(Contact contact)
         {
             throw new NotImplementedException();
         }
 
-        public int UpdateContact(Contact contact)
+        public IEnumerable<Contact> Update(Guid Id, Contact newContact)
         {
             throw new NotImplementedException();
         }
 
-        public int DeleteContact(Contact contact)
+        public IEnumerable<Contact>  Delete(Guid Id)
         {
             throw new NotImplementedException();
         }

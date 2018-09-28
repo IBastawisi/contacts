@@ -12,12 +12,17 @@ namespace Contacts.Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid contactId { get; set; }
+        public Guid ContactId { get; set; }
         [Required]
-        public string contacName { get; set; }
-        public string contacMail { get; set; }
-        public byte[] contactAvatar { get; set; }
+        public string ContacName { get; set; }
+        public string ContacMail { get; set; }
+        public byte[] ContactAvatar { get; set; }
         public string IsDeleted { get; set; }
 
+
+        public Contact()
+        {
+
+        }
     }
 }

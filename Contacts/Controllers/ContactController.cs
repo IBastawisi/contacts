@@ -18,7 +18,31 @@ namespace Contacts.Controllers
         }
 
         [HttpGet("[action]")]
-        public IEnumerable<Contact> ContactList()
+        public IEnumerable<Contact> GetAll()
+        {
+            return new List<Contact>();
+        }
+
+        [HttpGet("[action]")]
+        public Contact Get(Guid Id)
+        {
+            return new Contact();
+        }
+
+        [HttpPost("[action]")]
+        public IEnumerable<Contact> Add(Contact contact)
+        {
+            return new List<Contact>();
+        }
+
+        [HttpPut("[action]")]
+        public IEnumerable<Contact> Update(Guid Id, Contact newContact)
+        {
+            return new List<Contact>();
+        }
+
+        [HttpPost("[action]")]
+        public IEnumerable<Contact> Del(Guid Id)
         {
             return new List<Contact>();
         }
