@@ -11,7 +11,7 @@ namespace Contacts.Controllers
     [Route("api/[controller]")]
     public class ContactController : Controller
     {
-        private IContactRepo contactRepo;
+        private readonly IContactRepo contactRepo;
         public ContactController(IContactRepo _contactRepo)
         {
             this.contactRepo = _contactRepo;
@@ -42,7 +42,7 @@ namespace Contacts.Controllers
         }
 
         [HttpPost("[action]")]
-        public IEnumerable<Contact> Del(Guid Id)
+        public IEnumerable<Contact> Delete(Guid Id)
         {
             return new List<Contact>();
         }

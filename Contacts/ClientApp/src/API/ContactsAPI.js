@@ -1,4 +1,4 @@
-﻿const api = "/spi/ContactController";
+﻿const api = "/api/ContactController";
 
 export const getAll = () =>
     fetch(`${api}/GetAll`)
